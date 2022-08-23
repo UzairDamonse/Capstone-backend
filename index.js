@@ -4,10 +4,12 @@ const cors = require("cors"); // Used to prevent errors when working locally
 
 // Import routes
 const userRoute = require("./routes/userRoute");
+const postRoute = require("./routes/postRoute");
+const gameRoute = require("./routes/gameRoute");
 
 // Configure Server
 const app = express(); // Initialize express as an app variable
-app.set("port", process.env.PORT || 6969); // Set the port
+app.set("port", process.env.PORT || 1738); // Set the port
 app.use(express.json()); // Enable the server to handle JSON requests
 app.use(cors()); // Dont let local development give errors
 
@@ -18,6 +20,8 @@ app.get("/", (req, res) => {
 });
 // Use individual routes when visiting these URLS
 app.use("/users", userRoute);
+app.use("/posts", postRoute);
+app.use("/games", gameRoute);
 
 // Set up server to start listening for requests
 app.listen(app.get("port"), () => {
