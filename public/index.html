@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container d-flex flex-column">
+      <!-- Users -->
+
+      <table class="my-5">
+        <thead>
+          <tr>
+            <th>Url</th>
+            <th>Method</th>
+            <th>Explanation</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="userUrl">/users</td>
+            <td>Get</td>
+            <td>Displays all users from the table</td>
+          </tr>
+          <tr>
+            <td class="userUrl">/users/:id</td>
+            <td>Get</td>
+            <td>Only displays the user with the id specified in the url</td>
+          </tr>
+          <tr>
+            <td class="userUrl">/users</td>
+            <td>Post</td>
+            <td>Adds a user to the table</td>
+          </tr>
+          <tr>
+            <td class="userUrl">/users</td>
+            <td>Put</td>
+            <td>Edits the user if the email is in the database</td>
+          </tr>
+          <tr>
+            <td class="userUrl">/users/:id</td>
+            <td>Delete</td>
+            <td>Deletes the user with the id specified in the url</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Games -->
+
+      <table class="mb-5">
+        <thead>
+          <tr>
+            <th>Url</th>
+            <th>Method</th>
+            <th>Explanation</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="gameUrl">/games</td>
+            <td>Get</td>
+            <td>Displays all games from the table</td>
+          </tr>
+          <tr>
+            <td class="gameUrl">/games/:id</td>
+            <td>Get</td>
+            <td>Only displays the game with the id specified in the url</td>
+          </tr>
+          <tr>
+            <td class="gameUrl">/games</td>
+            <td>Post</td>
+            <td>Adds a game to the table</td>
+          </tr>
+          <tr>
+            <td class="gameUrl">/games</td>
+            <td>Put</td>
+            <td>Edits the game if the email is in the database</td>
+          </tr>
+          <tr>
+            <td class="gameUrl">/games/:id</td>
+            <td>Delete</td>
+            <td>Deletes the game with the id specified in the url</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Blogs -->
+
+      <table class="mb-5">
+        <thead>
+          <tr>
+            <th>Url</th>
+            <th>Method</th>
+            <th>Explanation</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="postUrl">/posts</td>
+            <td>Get</td>
+            <td>Displays all posts from the table</td>
+          </tr>
+          <tr>
+            <td class="postUrl">/posts/:id</td>
+            <td>Get</td>
+            <td>Only displays the post with the id specified in the url</td>
+          </tr>
+          <tr>
+            <td class="postUrl">/posts</td>
+            <td>Post</td>
+            <td>Adds a post to the table</td>
+          </tr>
+          <tr>
+            <td class="postUrl">/posts</td>
+            <td>Put</td>
+            <td>Edits the post if the email is in the database</td>
+          </tr>
+          <tr>
+            <td class="postUrl">/posts/:id</td>
+            <td>Delete</td>
+            <td>Deletes the post with the id specified in the url</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Script links -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

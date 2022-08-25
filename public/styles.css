@@ -1,0 +1,56 @@
+@font-face {
+  font-family: fonty;
+  src: url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Orbitron&display=swap");
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("https://i.postimg.cc/bvKmx4ks/Minimalist-1920x1080-wallpaper.webp");
+  background-attachment: fixed;
+  background-position: center;
+  font-family: fonty;
+}
+
+table {
+  background: #1e1e1e;
+  border-radius: 0.25rem;
+  border-collapse: collapse;
+  margin: 1rem;
+}
+
+th {
+  border-bottom: 1px solid #d8d8d8;
+  color: #551a8b;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+td {
+  color: #e6e6e9;
+  font-weight: 400;
+  padding: 0.65rem 1rem;
+}
+
+.userUrl {
+  color: #9966cc;
+  border-left: 2px solid #9966cc;
+}
+
+.gameUrl {
+  color: #bf00ff;
+  border-left: 2px solid #bf00ff;
+}
+
+.postUrl {
+  color: #9f039c;
+  border-left: 2px solid #9f039c;
+}
