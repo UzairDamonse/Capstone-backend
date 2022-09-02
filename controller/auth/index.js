@@ -59,8 +59,7 @@ async function Login(req, res) {
 async function Register(req, res) {
   try {
     let sql = "INSERT INTO users SET ?";
-    const { user_name, email, password, type, phone_number, imgURL, bio } =
-      req.body;
+    const { user_name, email, password, phone_number, imgURL, bio } = req.body;
 
     const salt = bcrypt.genSaltSync(10);
     const hash = bcrypt.hashSync(password, salt);
@@ -69,7 +68,6 @@ async function Register(req, res) {
       user_name,
       email,
       password: hash,
-      type,
       phone_number,
       imgURL,
       bio,

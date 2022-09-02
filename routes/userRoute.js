@@ -52,7 +52,7 @@ router.put("/", middleware, (req, res) => {
       res.send("User not found");
     } else {
       let updateSql = `UPDATE users SET ? WHERE user_id = ${req.user.user_id}`;
-      const { user_name, email, password, type, phone_number, imgURL, bio } =
+      const { user_name, email, password, phone_number, imgURL, bio } =
         req.body;
       console.log(email);
 
@@ -63,7 +63,6 @@ router.put("/", middleware, (req, res) => {
         user_name,
         email,
         password: hash,
-        type,
         phone_number,
         imgURL,
         bio,
@@ -79,22 +78,18 @@ router.put("/", middleware, (req, res) => {
 // Delete user
 
 router.delete("/:id", middleware, (req, res) => {
-  if (req.user.user_type === "admin") {
-    let id = req.params.id;
+  let id = req.params.id;
 
-    try {
-      con.query(
-        `DELETE FROM users WHERE users.user_id = "${id}"`,
-        (err, result) => {
-          if (err) throw err;
-          res.send(result);
-        }
-      );
-    } catch (error) {
-      console.log(error);
-    }
-  } else {
-    res.send("Not valid user");
+  try {
+    con.query(
+      `DELETE FROM users WHERE users.user_id = "${id}"`,
+      (err, result) => {
+        if (err) throw err;
+        res.send(result);
+      }
+    );
+  } catch (error) {
+    console.log(error);
   }
 });
 
