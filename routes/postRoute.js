@@ -17,6 +17,22 @@ router.get("/", (req, res) => {
   }
 });
 
+// Post
+router.get("/:id/post", (req, res) => {
+  id = req.params.id;
+  try {
+    con.query(
+      `SELECT * FROM users u INNER JOIN posts p ON p.user_id = u.user_id WHERE u.user_id = ${id}`,
+      (err, result) => {
+        if (err) throw err;
+        res.send(result);
+      }
+    );
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 // Single posts
 
 router.get("/:id", (req, res) => {

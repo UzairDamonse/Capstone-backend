@@ -76,7 +76,7 @@ async function Register(req, res) {
     con.query(sql, user, (err, result) => {
       if (err) throw err;
       console.log(result);
-      res.json(`User ${user.user_name} created successfully`);
+      res.json(`User ${user.user.user_name} created successfully`);
     });
   } catch (error) {
     console.log(error);
