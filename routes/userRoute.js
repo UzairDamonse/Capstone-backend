@@ -77,7 +77,7 @@ router.put("/", middleware, (req, res) => {
 
 // Delete user
 
-router.delete("/:id", middleware, (req, res) => {
+router.delete("/:id", (req, res) => {
   let id = req.params.id;
 
   try {
